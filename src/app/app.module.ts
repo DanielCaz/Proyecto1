@@ -2,15 +2,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { ContadorModule } from './contador/contador.module';
+import { CalculadoraComponent } from './contador/calculadora/calculadora.component';
+import { PokemonModule } from './pokemon/pokemon.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [AppComponent, CalculadoraComponent],
+  imports: [BrowserModule, ContadorModule, PokemonModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
