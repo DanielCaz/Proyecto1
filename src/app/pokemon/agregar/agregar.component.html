@@ -1,0 +1,14 @@
+<h3>
+  Agregar <small>{{ nuevo.nombre }}</small>
+</h3>
+<hr />
+<form (ngSubmit)="agregarPokemon()">
+  <input
+    type="text"
+    name="nombre"
+    [(ngModel)]="nuevo.nombre"
+    placeholder="nombre"
+  />
+  <input type="number" placeholder="pc" name="pc" [(ngModel)]="nuevo.pc" />
+  <button type="submit">Agregar</button>
+</form>

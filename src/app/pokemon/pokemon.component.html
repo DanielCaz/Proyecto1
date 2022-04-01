@@ -2,29 +2,9 @@
 <hr />
 <div class="row">
   <div class="col">
-    <h3>Mis Pokemons</h3>
-    <hr />
-    <ul>
-      <li *ngFor="let pokemon of listaPokemon">
-        {{ pokemon.nombre }} - {{ pokemon.pc }}
-      </li>
-    </ul>
+    <app-lista></app-lista>
   </div>
-
   <div class="col">
-    <h3>
-      Agregar <small>{{ nuevo.nombre }}</small>
-    </h3>
-    <hr />
-    <form (ngSubmit)="agregarPokemon()">
-      <input
-        type="text"
-        name="nombre"
-        [(ngModel)]="nuevo.nombre"
-        placeholder="nombre"
-      />
-      <input type="number" placeholder="pc" name="pc" [(ngModel)]="nuevo.pc" />
-      <button type="submit">Agregar</button>
-    </form>
+    <app-agregar></app-agregar>
   </div>
 </div>
