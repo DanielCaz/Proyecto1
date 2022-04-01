@@ -4,6 +4,7 @@ A project I made in my web development class as an introduction to Angular
 
 ## Quick start
 
+```bash
 # clone repo
 git clone https://github.com/DanielCaz/Proyecto1.git
 
@@ -15,3 +16,4 @@ npm install
 
 # start the server
 npm start
+```
