@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-html-handler',
@@ -13,6 +13,9 @@ export class HtmlHandlerComponent implements OnInit {
   nombre: string = '';
   apellido: string = '';
   edad: number = 0;
+  ciudad: string = '';
+
+  @ViewChild('txtCiudad') txtCiudad!: ElementRef<HTMLInputElement>;
 
   guardar(event: KeyboardEvent, nombre: string) {
     if (event.key === 'Enter') {
@@ -22,5 +25,15 @@ export class HtmlHandlerComponent implements OnInit {
 
   almacenar() {
     console.log('Hola');
+  }
+
+  calcularEdad() {
+    const inputItem = <HTMLInputElement>document.getElementById('txtEdad');
+    console.log(inputItem.value);
+    inputItem.value = '';
+  }
+
+  darCiudad() {
+    console.log(this.txtCiudad.nativeElement.value);
   }
 }

@@ -1,10 +1,11 @@
 <div class="container">
-  <div class="row justify-content-center">
+  <div class="row justify-content-center my-3">
     <div class="col">
       <h3>Dato</h3>
     </div>
     <div class="col">
       <input
+        class="m-2"
         type="text"
         placeholder="Nombre"
         (keyup)="guardar($event, txtNombre.value)"
@@ -12,10 +13,25 @@
         #txtNombre
       />
       <input
+        class="m-2"
         type="text"
         placeholder="Apellido"
         (keyup.Enter)="almacenar()"
         [(ngModel)]="apellido"
+      />
+      <input
+        class="m-2"
+        type="number"
+        placeholder="edad"
+        id="txtEdad"
+        (keyup.enter)="calcularEdad()"
+      />
+      <input
+        type="text"
+        class="m-2"
+        placeholder="ciudad"
+        #txtCiudad
+        (keyup.enter)="darCiudad()"
       />
     </div>
   </div>
@@ -23,3 +39,4 @@
     <div class="col">Usuario: {{ nombre }} {{ apellido }} - {{ edad }}</div>
   </div>
 </div>
+8
