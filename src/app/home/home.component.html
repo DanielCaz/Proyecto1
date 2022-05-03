@@ -1,0 +1,25 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav mode="side">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <mat-list-item>
+        <mat-icon>folder</mat-icon>
+        <div mat-line>Home</div>
+        <div mat-line>02-05-2022</div>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon>people</mat-icon>
+        <div mat-line>Users</div>
+        <div mat-line>02-05-2022</div>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-toolbar>
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="spacer"></span>
+    <button mat-icon-button>Logout</button>
+  </mat-toolbar>
+  <div class="container"><h1>Contenido</h1></div>
+</mat-sidenav-container>

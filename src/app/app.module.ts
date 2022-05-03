@@ -8,6 +8,9 @@ import { CalculadoraComponent } from './contador/calculadora/calculadora.compone
 import { PokemonModule } from './pokemon/pokemon.module';
 import { BootstrapComponent } from './bootstrap/bootstrap.component';
 import { HtmlHandlerComponent } from './html-handler/html-handler.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './home/home.component';
+import { MaterialModuleModule } from './home/material-module.module';
 
 @NgModule({
   declarations: [
@@ -15,8 +18,16 @@ import { HtmlHandlerComponent } from './html-handler/html-handler.component';
     CalculadoraComponent,
     BootstrapComponent,
     HtmlHandlerComponent,
+    HomeComponent,
   ],
-  imports: [BrowserModule, ContadorModule, PokemonModule, FormsModule],
+  imports: [
+    BrowserModule,
+    ContadorModule,
+    PokemonModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MaterialModuleModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
