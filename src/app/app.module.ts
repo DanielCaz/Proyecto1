@@ -11,6 +11,8 @@ import { HtmlHandlerComponent } from './html-handler/html-handler.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { MaterialModuleModule } from './home/material-module.module';
+import { HttpComponent } from './http/http.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { MaterialModuleModule } from './home/material-module.module';
     BootstrapComponent,
     HtmlHandlerComponent,
     HomeComponent,
+    HttpComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +30,7 @@ import { MaterialModuleModule } from './home/material-module.module';
     FormsModule,
     BrowserAnimationsModule,
     MaterialModuleModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

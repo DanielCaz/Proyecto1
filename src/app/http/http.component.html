@@ -1,0 +1,28 @@
+<div class="container pt-3">
+  <form (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="inputPokemon" class="form-label">Pokemon</label>
+      <input
+        id="inputPokemon"
+        type="text"
+        name="pokemon"
+        [(ngModel)]="nombrePokemon"
+        class="form-control"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+  </form>
+</div>
+
+<div *ngIf="infoPokemon">
+  <h2>Nombre: {{ infoPokemon.name }}</h2>
+  <h3>Habilidades</h3>
+  <ul>
+    <li
+      *ngFor="let ability of infoPokemon.abilities"
+      style="text-transform: capitalize"
+    >
+      {{ ability.ability.name.replace("-", " ") }}
+    </li>
+  </ul>
+</div>
